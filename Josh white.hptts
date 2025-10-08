@@ -1,0 +1,31 @@
+const express = require('express');
+const axios = require('axios');
+const cors = require('cors');
+const app = express();
+const PORT = 5000;
+
+app.use(cors());
+
+app.get('/search', async (req, res) => {
+  const { artist } = req.query;
+  if (!artist) return res.status(400).json({ error: "Artist name required." });
+
+  try {
+    // Example: Search MusicBrainz for artist
+    const mbUrl = `https://musicbrainz.org/ws/2/artist/?query=${encodeURIComponent(artist)}&fmt=json&limit=5`;
+    const mbRes = await axios.get(mbUrl);
+
+    // You can add more sources here and merge results as needed
+    res.json({
+      musicbrainz: mbRes.data.artists,
+      // spotify: ..., // Future
+      // lastfm: ...,  // Future
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
