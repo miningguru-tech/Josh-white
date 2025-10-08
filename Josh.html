@@ -1,0 +1,189 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Josh White — Musician</title>
+  <meta name="description" content="Official site of Josh White — singer, songwriter, performer." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    /* -----------------------
+       Simple modern CSS
+       Replace images/audio links where indicated
+       ----------------------- */
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#e76f51}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071028 0%,#081124 100%);-webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:8px;background:url('assets/cover.jpg') center/cover no-repeat;border:2px solid rgba(255,255,255,0.04)}
+    h1{margin:0;font-size:20px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}.hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+.headline{font-size:34px;margin:0 0 8px;color:white}
+.sub{color:var(--muted);margin:0 0 18px}
+.actions{display:flex;gap:12px}
+.btn{padding:12px 16px;border-radius:10px;border:0;cursor:pointer}
+.btn-primary{background:var(--accent);color:white}
+.btn-alt{background:transparent;color:var(--accent);border:1px solid rgba(231,111,81,0.12)}
+
+.cover{border-radius:14px;overflow:hidden;background:#111;min-height:240px}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+
+section{margin-top:28px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);padding:18px;border-radius:12px;color:#dbeaf8}
+.muted{color:var(--muted)}
+
+.tracks audio{width:100%;margin-top:8px}
+.tour table{width:100%;border-collapse:collapse}
+.tour th,.tour td{padding:10px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03)}
+
+footer{margin:40px 0;color:var(--muted);text-align:center}
+
+/* responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .grid-3{grid-template-columns:1fr}
+}
+
+  </style>
+</head>
+<body>
+  <!--
+    Josh White - Single-file website
+    How to use:
+    - Replace assets/cover.jpg, assets/headshot.jpg, and sample audio URLs with real files.
+    - Commit this file as index.html into a GitHub repository and enable Pages (or push to a repo named <username>.github.io)
+  -->  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Josh White</h1>
+          <div class="muted">Singer • Songwriter • Performer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#music">Music</a>
+        <a href="#tour">Tour</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header><main>
+  <section class="hero">
+    <div class="hero-card">
+      <p class="muted">New Single Out Now</p>
+      <h2 class="headline">Josh White — "Into the Night"</h2>
+      <p class="sub">A soulful blend of indie-folk and modern pop. Live shows, fresh recordings, and collaborations.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#music">Listen</a>
+        <a class="btn btn-alt" href="mailto:booking@joshwhite.com">Book Josh</a>
+      </div>
+
+      <div style="margin-top:18px">
+        <strong>Follow</strong>
+        <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+          <!-- replace # with real links -->
+          <a href="#" title="Spotify">Spotify</a>
+          <a href="#" title="YouTube">YouTube</a>
+          <a href="#" title="Instagram">Instagram</a>
+          <a href="#" title="Twitter/X">X</a>
+        </div>
+      </div>
+
+      <div style="margin-top:18px" class="muted">Press kit & high-res photos available on request.</div>
+    </div>
+
+    <aside class="cover">
+      <!-- Replace with cover artwork or artist image -->
+      <img src="assets/cover.jpg" alt="Josh White — cover photo" />
+    </aside>
+  </section>
+
+  <section id="music">
+    <h3>Featured Tracks</h3>
+    <div class="grid-3" style="margin-top:12px">
+      <div class="card tracks">
+        <strong>Into the Night</strong>
+        <div class="muted">Single — 3:12</div>
+        <!-- Replace with your WAV/MP3 hosted file or use streaming embeds -->
+        <audio controls preload="none">
+          <source src="https://example.com/audio/into-the-night.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="card tracks">
+        <strong>City Lights</strong>
+        <div class="muted">From the album "Midnight Roads"</div>
+        <audio controls preload="none">
+          <source src="https://example.com/audio/city-lights.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="card tracks">
+        <strong>Acoustic Demo</strong>
+        <div class="muted">Live studio take</div>
+        <audio controls preload="none">
+          <source src="https://example.com/audio/acoustic-demo.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <section id="tour" class="tour">
+    <h3>Upcoming Shows</h3>
+    <div class="card" style="margin-top:12px">
+      <table aria-label="Upcoming shows">
+        <thead>
+          <tr><th>Date</th><th>City</th><th>Venue</th><th>Tickets</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nov 14, 2025</td><td>Lagos</td><td>The Blue Barn</td><td><a href="#">Tickets</a></td></tr>
+          <tr><td>Dec 05, 2025</td><td>Accra</td><td>Harbor Hall</td><td><a href="#">Tickets</a></td></tr>
+          <tr><td>Jan 22, 2026</td><td>London</td><td>Roundhouse</td><td><a href="#">Tickets</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h3>Gallery</h3>
+    <div class="grid-3" style="margin-top:12px">
+      <div class="card"><img src="assets/headshot.jpg" alt="Josh headshot" style="width:100%;height:180px;object-fit:cover;border-radius:8px"/></div>
+      <div class="card"><img src="assets/live1.jpg" alt="Live performance" style="width:100%;height:180px;object-fit:cover;border-radius:8px"/></div>
+      <div class="card"><img src="assets/studio.jpg" alt="Studio" style="width:100%;height:180px;object-fit:cover;border-radius:8px"/></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <div class="card" style="margin-top:12px;display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+      <div style="flex:1;min-width:220px">
+        <p class="muted">For bookings, press or collaborations:</p>
+        <p><strong>booking@joshwhite.com</strong></p>
+        <p class="muted">Or use the quick contact form below.</p>
+      </div>
+
+      <form style="flex:1;min-width:240px" onsubmit="event.preventDefault(); alert('Thanks — this demo form does not send email. Replace with your form handler or use Formspree/Netlify forms.');">
+        <label class="muted">Name <br/><input required placeholder="Your name" style="margin-top:6px;padding:10px;width:100%;border-radius:8px;border:0;background:#07101a;color:#ecf6ff"/></label>
+        <label class="muted" style="display:block;margin-top:10px">Email <br/><input required placeholder="you@example.com" style="margin-top:6px;padding:10px;width:100%;border-radius:8px;border:0;background:#07101a;color:#ecf6ff"/></label>
+        <label class="muted" style="display:block;margin-top:10px">Message <br/><textarea required placeholder="Tell Josh about your project" style="margin-top:6px;padding:10px;width:100%;height:90px;border-radius:8px;border:0;background:#07101a;color:#ecf6ff"></textarea></label>
+        <div style="margin-top:10px"><button class="btn btn-primary">Send</button></div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Josh White — All Rights Reserved • Built for GitHub Pages
+</footer>
+
+  </div>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script></body>
+</html>
